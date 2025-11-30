@@ -1,0 +1,21 @@
+run = "npm start"
+entrypoint = "server.js"
+hidden = [".git", ".gitignore", "node_modules"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+deploymentTarget = "cloudrun"
+
+[languages]
+[languages.javascript]
+pattern = "**/*.{js,jsx,ts,tsx,mjs}"
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+exposeLocalhost = true

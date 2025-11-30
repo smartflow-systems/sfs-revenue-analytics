@@ -1,0 +1,33 @@
+{
+  "name": "sfs-revenue-analytics",
+  "version": "1.0.0",
+  "description": "SmartFlow Systems Revenue Analytics & Optimization Engine",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'build complete' && exit 0",
+    "test": "echo 'no tests configured' && exit 0"
+  },
+  "keywords": [
+    "revenue",
+    "analytics",
+    "optimization",
+    "smartflow",
+    "metrics",
+    "stripe"
+  ],
+  "author": "SmartFlow Systems",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "stripe": "^16.12.0",
+    "dotenv": "^16.6.1",
+    "cors": "^2.8.5",
+    "helmet": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
